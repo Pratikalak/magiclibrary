@@ -1,4 +1,4 @@
-FROM wordpress:5.2.1-php7.4-apache
+FROM wordpress:php7.4-apache
 
 # Install MySQL client
 RUN apt-get update && \

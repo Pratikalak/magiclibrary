@@ -1,3 +1,4 @@
+
 services:
   db:
     image: mysql:5.7
@@ -12,8 +13,8 @@ services:
 
   web:
     build:
-      context: .
-      dockerfile: web/Dockerfile
+      context: ./web
+      dockerfile: Dockerfile
     depends_on:
       - db
     ports:
@@ -24,13 +25,13 @@ services:
       WORDPRESS_DB_PASSWORD: library123
       WORDPRESS_DB_NAME: magic
     volumes:
-      - ./web/search.php:/var/www/html/search.php
-      - ./web/download.php:/var/www/html/download.php
       - uploads:/var/www/html/uploads
       - backups:/backups
 
   upload:
-    build: ./upload
+    build:
+      context: ./upload
+      dockerfile: Dockerfile
     depends_on:
       - db
     ports:

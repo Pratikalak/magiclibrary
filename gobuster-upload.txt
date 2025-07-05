@@ -1,0 +1,7 @@
+/.html               [33m (Status: 403)[0m [Size: 290]
+/index.html          [32m (Status: 200)[0m [Size: 10703]
+/.php                [33m (Status: 403)[0m [Size: 290]
+/javascript          [36m (Status: 301)[0m [Size: 346][34m [--> http://upload.magiclibrary.htb:8081/javascript/][0m
+/.html               [33m (Status: 403)[0m [Size: 290]
+/.php                [33m (Status: 403)[0m [Size: 290]
+/server-status       [32m (Status: 200)[0m [Size: 8258]

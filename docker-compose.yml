@@ -11,7 +11,9 @@ services:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
   web:
-    build: ./web
+    build:
+      context: .
+      dockerfile: web/Dockerfile
     depends_on:
       - db
     ports:
@@ -25,6 +27,7 @@ services:
       - ./web/search.php:/var/www/html/search.php
       - ./web/download.php:/var/www/html/download.php
       - uploads:/var/www/html/uploads
+      - backups:/backups
 
   upload:
     build: ./upload
@@ -38,3 +41,4 @@ services:
 volumes:
   db_data:
   uploads:
+  backups:

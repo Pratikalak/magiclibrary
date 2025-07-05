@@ -1,0 +1,5 @@
+# ignore enumeration outputs and local scratch
+*.txt
+*.csv
+shell.php
+magiclibrary/    # ignore any stray nested dir
